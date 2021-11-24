@@ -1,0 +1,35 @@
+.show-logo {
+  animation-name: appearance-left--logo;
+  animation-duration: 0.9s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.show-loader-text {
+  animation-name: appearance-opacity;
+  animation-duration: 0.6s;
+  animation-delay: 0.9s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.appirance-main-content {
+  animation-name: appearance-opacity;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.appirance-audience-block-tablet--forward {
+  animation-name: appearance-left--audience-appirance;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.appirance-audience-block-tablet--back {
+  animation-name: appearance-left--audience-disapire;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
