@@ -1,13 +1,7 @@
-.header {
-  display: block;
-}
-
-.header__wrapper {
-  padding: 25px 32px;
-
-  @include viewport--md {
-    padding: 25px 36px;
-  }
+.header__container {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .header__logo {
@@ -23,9 +17,9 @@
   &:active {
     opacity: 0.5;
   }
+}
 
-  svg {
-    width: 192px;
-    height: 24px;
-  }
+.header__logo-icon {
+  width: 192px;
+  height: 24px;
 }

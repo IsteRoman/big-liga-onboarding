@@ -1,43 +1,52 @@
-@keyframes appearance-left--logo {
+@keyframes appearance-from-the-left {
   0% {
-    left: -1000px;
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
-    left: 13%;
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
-@keyframes appearance-left--audience-appirance {
+@keyframes appearance-from-the-left-special {
   0% {
-    left: -1000px;
+    transform: translateX(-100%);
     opacity: 0;
   }
+  45% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
   100% {
-    left: -25px;
+    transform: scale(1);
     opacity: 1;
   }
 }
 
-@keyframes appearance-left--audience-disapire {
+@keyframes appearance-from-below {
   0% {
-    left: -25px;
-    opacity: 1;
-  }
-
-  100% {
-    left: -1000px;
+    bottom: -100px;
     opacity: 0;
   }
-}
-
-@keyframes appearance-opacity {
-  0% {
-    opacity: 0;
-  }
-
   100% {
+    bottom: 100px;
     opacity: 1;
   }
 }
+
+@keyframes appearance-from-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

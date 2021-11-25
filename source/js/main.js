@@ -2,7 +2,7 @@ import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
-import {closeLoader} from './modules/loader';
+import {runLoaderWork} from './modules/loader';
 import {showAudience} from './modules/main-content-show-audience';
 
 // Utils
@@ -10,7 +10,7 @@ import {showAudience} from './modules/main-content-show-audience';
 
 ieFix();
 iosVhFix();
-closeLoader();
+runLoaderWork();
 showAudience();
 
 // Modules

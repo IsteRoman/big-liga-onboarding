@@ -1,34 +1,42 @@
 const ENTER_CODE = 13;
-const MAX_TABLET_WIDTH = 1023;
+const breakpoint = window.matchMedia('(max-width:1023px)');
+const loader = document.querySelector('.loader');
 const header = document.querySelector('header');
 const main = document.querySelector('main');
-const footer = document.querySelector('footer');
 
-const closeLoader = () => {
-  document.addEventListener('DOMContentLoaded', () => {
-    const closeLoaderFunction = () => {
-      const loaderBlock = document.querySelector('.loader');
+const runLoaderWork = () => {
+  if (!loader) {
+    return;
+  }
 
-      if (window.matchMedia(`(max-width: ${MAX_TABLET_WIDTH}px)`).matches) {
-        loaderBlock.addEventListener('click', () => {
-          loaderBlock.classList.add('hidden');
-          header.classList.add('appirance-main-content');
-          main.classList.add('appirance-main-content');
-          footer.classList.add('appirance-main-content');
-        });
-      }
-      window.addEventListener('keydown', (evt) => {
-        if (evt.keyCode === ENTER_CODE) {
-          loaderBlock.classList.add('hidden');
-          header.classList.add('appirance-main-content');
-          main.classList.add('appirance-main-content');
-          footer.classList.add('appirance-main-content');
-        }
-      });
-    };
-    setTimeout(closeLoaderFunction, 2000);
-  });
+  const cloceLoader = () => {
+    if (document.readyState !== 'loading') {
+      loader.classList.add('hidden');
+      header.classList.add('fadeInDown');
+      main.classList.add('fadeInLeft');
+    }
+  };
+
+  const cloceLoaderByEnter = (evt) => {
+    if (evt.keyCode === ENTER_CODE) {
+      cloceLoader();
+    }
+  };
+
+  const breakpointCheckerLoader = () => {
+    if (breakpoint.matches) {
+      loader.addEventListener('click', (cloceLoader));
+      window.removeEventListener('keydown', (cloceLoaderByEnter));
+    } else {
+      loader.removeEventListener('click', (cloceLoader));
+      window.addEventListener('keydown', (cloceLoaderByEnter));
+    }
+
+
+  };
+  breakpoint.addListener(breakpointCheckerLoader);
+  breakpointCheckerLoader();
 };
 
-export {closeLoader};
-
+export {breakpoint};
+export {runLoaderWork};

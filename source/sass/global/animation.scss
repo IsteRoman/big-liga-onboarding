@@ -1,35 +1,23 @@
-.show-logo {
-  animation-name: appearance-left--logo;
-  animation-duration: 0.9s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-.show-loader-text {
-  animation-name: appearance-opacity;
-  animation-duration: 0.6s;
-  animation-delay: 0.9s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-.appirance-main-content {
-  animation-name: appearance-opacity;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-.appirance-audience-block-tablet--forward {
-  animation-name: appearance-left--audience-appirance;
+.fadeInLeft {
+  animation-name: appearance-from-the-left;
   animation-duration: 0.5s;
   animation-timing-function: ease;
-  animation-fill-mode: forwards;
 }
 
-.appirance-audience-block-tablet--back {
-  animation-name: appearance-left--audience-disapire;
+.fadeInLeft-special {
+  animation-name: appearance-from-the-left-special;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.fadeInUp {
+  animation-name: appearance-from-below;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+}
+
+.fadeInDown {
+  animation-name: appearance-from-top;
   animation-duration: 0.5s;
   animation-timing-function: ease;
-  animation-fill-mode: forwards;
 }
